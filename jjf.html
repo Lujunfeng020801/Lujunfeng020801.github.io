@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>加减法</title>
+<script>
+  function start1(){
+      var i;
+
+          var a=Math.round(parseInt(Math.random()*20));
+          var b=Math.round(parseInt(Math.random()*20));
+          var c=Math.round(parseInt(Math.random()*2));//0-2  ≥0  ＜2   故只产生0 1
+          alert(c);
+          if(c==0)
+          
+             app.sign.value="+";
+          else 
+         
+             app.sign.value="-";
+          app.num1.value=a;
+          app.num2.value=b;
+
+
+          }
+  function judge(){
+      if(app.sign.value=="+"){
+
+          if(parseInt(app.num3.value)==parseInt(app.num1.value)+parseInt(app.num2.value)){
+              alert("回答正确");
+          }
+          else
+              alert("回答错误");
+
+
+      }
+      else if(app.sign.value=="-"){
+      if(parseInt(app.num3.value)==parseInt(app.num1.value)-parseInt(app.num2.value)){
+          alert("回答正确");
+      }
+      else
+          alert("回答错误");
+
+      }
+
+      }
+</script>
+</head>
+<body>
+<form name="app">
+<p>加减法</p>
+<input type="button"   value=开始 onClick=start1()><br></br>
+<input type="text"  name="num1" >
+<input type="text"  name="sign" size="1">
+<input type="text"  name="num2"> =
+<input type="text"  name="num3" > <br></br>
+<input type="button"   value=提交 onClick=judge()>
+</form>
+
+</body>
+</html>
